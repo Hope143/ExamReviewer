@@ -1,0 +1,19 @@
+.questionContainer {
+  width: 100%;
+
+  max-width: 1000px !important;
+}
+
+.answerContainer {
+  width: 100%;
+
+  max-width: 300px !important;
+}
+
+.shuffleButtonContainer {
+  position: sticky;
+  top: 0;
+  right: 50%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
