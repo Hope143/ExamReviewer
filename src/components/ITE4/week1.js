@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./RandomizedSentence.css";
 
-function RandomizedSentence({ week1Items }) {
+function RandomizedSentence({ week1Items, weekNo }) {
   const [showAnswer, setShowAnswer] = useState(false);
   const [showAllAnswer, setShowAllAnswer] = useState(false);
   const [getButtonNo, setGetButtonNo] = useState();
@@ -62,21 +62,24 @@ function RandomizedSentence({ week1Items }) {
   return (
     <div className="px-2 py-3 px-sm-5 pt-sm-5 pb-sm-0 bg-light">
       <div>
-        <h2 className="text-success fw-bold">ITE4 FINAL EXAM REVIEWER</h2>
-        <h3 className="fw-bold text-light bg-dark p-2">WEEK 1</h3>
-        <div className="shuffleButtonContainer bg-light">
+        <h2 className="text-success m-0 fw-bold">ITE4 FINAL EXAM REVIEWER</h2>
+
+        <div className="shuffleButtonContainer d-flex bg-light">
           <button
-            className="btn bg-primary text-light fs-4 px-4"
+            className="btn bg-primary text-light fs-5 px-2 px-sm-4"
             onClick={ShuffleHandler}
           >
             Shuffle
           </button>
           <button
-            className="btn bg-primary text-light fs-4 px-4 ms-3"
+            className="btn bg-primary text-light fs-5 px-2 px-sm-4 ms-3"
             onClick={ShowAllHandler}
           >
             {showAllAnswer ? "Hide All" : "Show All"}
           </button>
+          <h3 className="fw-bold text-light bg-dark p-2 mb-0 ms-3 rounded-2">
+            {weekNo}
+          </h3>
         </div>
         {Week1Handler()}
       </div>

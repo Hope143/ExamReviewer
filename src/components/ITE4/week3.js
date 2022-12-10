@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import "./RandomizedSentence.css";
 
-function Week2({ week2Items, weekNo }) {
+function Week3({ week3Items, weekNo }) {
   const [showAnswer, setShowAnswer] = useState(false);
   const [showAllAnswer, setShowAllAnswer] = useState(false);
   const [getButtonNo, setGetButtonNo] = useState();
 
-  const [newWeekList, setNewWeekList] = useState([...week2Items]);
+  const [newWeekList, setNewWeekList] = useState([...week3Items]);
 
   const ShuffleHandler = (e) => {
     e.preventDefault();
-    const shuffle = (week2Items) =>
-      [...week2Items].sort(() => Math.random() - 0.5);
-    const newWeek1 = shuffle(week2Items);
+    const shuffle = (week3Items) =>
+      [...week3Items].sort(() => Math.random() - 0.5);
+    const newWeek1 = shuffle(week3Items);
     setNewWeekList(newWeek1);
   };
 
@@ -85,4 +85,4 @@ function Week2({ week2Items, weekNo }) {
   );
 }
 
-export default Week2;
+export default Week3;
