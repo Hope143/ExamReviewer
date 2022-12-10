@@ -62,7 +62,7 @@ function RandomizedSentence({ week1Items }) {
   };
 
   return (
-    <div className="p-5 bg-light">
+    <div className="px-2 py-3 p-sm-5 bg-light">
       <div>
         <h2 className="text-success fw-bold">ITE4 FINAL EXAM REVIEWER</h2>
         <h3>WEEK 1</h3>
