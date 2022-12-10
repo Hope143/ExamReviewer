@@ -8,10 +8,8 @@ function RandomizedSentence({ week1Items }) {
 
   const [newWeekList, setNewWeekList] = useState([...week1Items]);
 
-  console.log(week1Items);
-  console.log(newWeekList);
-
-  const ShuffleHandler = () => {
+  const ShuffleHandler = (e) => {
+    e.preventDefault();
     const shuffle = (week1Items) =>
       [...week1Items].sort(() => Math.random() - 0.5);
     const newWeek1 = shuffle(week1Items);
@@ -46,7 +44,7 @@ function RandomizedSentence({ week1Items }) {
             </button>
 
             <p
-              className={`fs-4 text-danger m-0 fw-semibold ${
+              className={`fs-5 text-danger m-0 fw-semibold ${
                 (showAnswer && getButtonNo === item.id) ||
                 showAllAnswer !== false
                   ? "visible"
@@ -62,10 +60,10 @@ function RandomizedSentence({ week1Items }) {
   };
 
   return (
-    <div className="px-2 py-3 p-sm-5 bg-light">
+    <div className="px-2 py-3 px-sm-5 pt-sm-5 pb-sm-0 bg-light">
       <div>
         <h2 className="text-success fw-bold">ITE4 FINAL EXAM REVIEWER</h2>
-        <h3>WEEK 1</h3>
+        <h3 className="fw-bold text-light bg-dark p-2">WEEK 1</h3>
         <div className="shuffleButtonContainer bg-light">
           <button
             className="btn bg-primary text-light fs-4 px-4"
