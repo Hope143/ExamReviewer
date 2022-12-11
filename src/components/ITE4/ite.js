@@ -4,6 +4,11 @@ import Week2 from "./week2";
 import Week3 from "./week3";
 import Week4 from "./week4";
 import Week5 from "./week5";
+import Week7 from "./week7";
+import Week8 from "./week8";
+import Week9 from "./week9";
+import Week10 from "./week10";
+
 import PrelimExam from "./prelimExam";
 import {
   week1Items,
@@ -12,7 +17,13 @@ import {
   week4Items,
   week5Items,
   prelimExam,
-} from "../../data/data";
+} from "../../data/dataPrelim";
+import {
+  week7Items,
+  week8Items,
+  week9Items,
+  week10Items,
+} from "../../data/dataMidterm";
 
 function ITE() {
   return (
@@ -53,8 +64,23 @@ function ITE() {
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#prelimExam">
-              Prelim Exam
+            <a className="dropdown-item" href="#week7">
+              Week 7
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#week8">
+              Week 8
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#week9">
+              Week 9
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="#week10">
+              Week 10
             </a>
           </li>
         </ul>
@@ -76,6 +102,18 @@ function ITE() {
       </div>
       <div id="prelimExam">
         <PrelimExam prelimExam={prelimExam} weekNo="Prelim" />
+      </div>
+      <div id="week7">
+        <Week7 week7Items={week7Items} weekNo="WEEK 7" />
+      </div>
+      <div id="week8">
+        <Week8 week8Items={week8Items} weekNo="WEEK 8" />
+      </div>
+      <div id="week9">
+        <Week9 week9Items={week9Items} weekNo="WEEK 9" />
+      </div>
+      <div id="week10">
+        <Week10 week10Items={week10Items} weekNo="WEEK 10" />
       </div>
     </div>
   );
