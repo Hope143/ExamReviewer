@@ -1,0 +1,23 @@
+.navbarToggle {
+  position: fixed !important;
+  top: 3px;
+  right: 5px;
+  z-index: 3;
+}
+
+.collapse {
+  position: fixed !important;
+  top: 50px;
+  left: 0;
+  z-index: 5;
+}
+
+.nav-item:hover {
+  background-color: rgb(0, 187, 255);
+}
+
+@media screen and (max-width: 1088px) {
+  .collapse {
+    top: 45px;
+  }
+}

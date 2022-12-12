@@ -1,0 +1,36 @@
+body::before {
+  content: "";
+  display: block;
+  margin-top: 50px;
+}
+
+.questionContainer {
+  width: 100%;
+
+  max-width: 1000px !important;
+}
+
+.answerContainer {
+  width: 100%;
+
+  max-width: 300px !important;
+}
+
+.shuffleButtonContainer {
+  position: sticky;
+  top: 0;
+  right: 50%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.dropdownContainter {
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+.dropdownButton {
+  width: 100% !important;
+}

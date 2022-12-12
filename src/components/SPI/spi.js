@@ -8,24 +8,24 @@ import Week7 from "./week7";
 import Week8 from "./week8";
 import Week9 from "./week9";
 import Week10 from "./week10";
+import Week11 from "./week11";
 
-import PrelimExam from "./prelimExam";
 import {
   week1Items,
   week2Items,
   week3Items,
   week4Items,
   week5Items,
-  prelimExam,
 } from "./data/dataPrelim";
 import {
   week7Items,
   week8Items,
   week9Items,
   week10Items,
+  week11Items,
 } from "./data/dataMidterm";
 
-function ITE() {
+function SPI() {
   return (
     <div>
       <div className="dropdownContainter dropdown w-100">
@@ -64,11 +64,6 @@ function ITE() {
             </a>
           </li>
           <li>
-            <a className="dropdown-item" href="#prelim">
-              PRELIM
-            </a>
-          </li>
-          <li>
             <a className="dropdown-item" href="#week7">
               Week 7
             </a>
@@ -88,6 +83,11 @@ function ITE() {
               Week 10
             </a>
           </li>
+          <li>
+            <a className="dropdown-item" href="#week11">
+              Week 11
+            </a>
+          </li>
         </ul>
       </div>
       <div id="week1">
@@ -105,9 +105,6 @@ function ITE() {
       <div id="week5">
         <Week5 week5Items={week5Items} weekNo="WEEK 5" />
       </div>
-      <div id="prelim">
-        <PrelimExam prelimExam={prelimExam} weekNo="Prelim" />
-      </div>
       <div id="week7">
         <Week7 week7Items={week7Items} weekNo="WEEK 7" />
       </div>
@@ -120,8 +117,11 @@ function ITE() {
       <div id="week10">
         <Week10 week10Items={week10Items} weekNo="WEEK 10" />
       </div>
+      <div id="week11">
+        <Week11 week11Items={week11Items} weekNo="WEEK 11" />
+      </div>
     </div>
   );
 }
 
-export default ITE;
+export default SPI;
